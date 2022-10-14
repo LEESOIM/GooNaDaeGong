@@ -171,7 +171,7 @@
                       JOIN
                        CATEGORY C
                        USING(CATE_NUM)
-                        WHERE CATE_NUM  =  1111
+                        WHERE CATE_NUM  =  #{cate_num} 
                      ORDER BY ITEM_NUM DESC, FILENUM ASC) II)
                     GROUP BY ITEM_NUM
               )
