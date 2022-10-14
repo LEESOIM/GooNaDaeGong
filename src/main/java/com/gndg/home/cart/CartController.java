@@ -58,7 +58,11 @@ public class CartController {
 //           sum += cartDTO2.getTotalPrice();
 //           cartDTO2.setTotalSum(sum);
 //           System.out.println("sum=="+sum);
-//        }
+//         }
+        System.out.println("cartcart!!!=="+cart);
+        System.out.println("cartcart!!!=="+cart.size());
+        
+        
         Long sum =0L;
         for(int i=0; i<cart.size(); i++) {
              System.out.println(i+"번 쨰"+cart.get(i).getTotalPrice());

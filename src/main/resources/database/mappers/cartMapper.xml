@@ -4,6 +4,15 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gndg.home.cart.CartDAO">
 
+
+<!-- 카트중복 -->
+<select id="getDulCart" parameterType="CartDTO" resultType="Long">
+SELECT COUNT(ITEM_NUM)
+FROM CART
+WHERE ITEM_NUM = #{item_num}
+      AND USER_ID = #{user_id}
+</select>
+
 <!-- 카트 추가 -->
 <insert id="setAddCart" parameterType="CartDTO">
 INSERT INTO CART
@@ -14,6 +23,7 @@ VALUES(
 	#{item_count}
 )
 </insert>
+
 
 <!-- 카트 목록 -->
 <!-- <select id="getCartList" parameterType="CartDTO" resultMap="cartListResult">
@@ -54,13 +64,13 @@ WHERE C.USER_ID = #{user_id} AND ITEM_NUM=#{item_num}
 <select id="getItemList" parameterType="CartDTO" resultMap="CartListResult">
 SELECT C.*,F.FILENAME,I.ITEM_TITLE,I.ITEM_PRICE,I.ITEM_PRICE*C.ITEM_COUNT AS TOTALPRICE, M.USER_POST,M.USER_ADDR,M.USER_ADDR2
 FROM MEMBER M
-	LEFT JOIN
+	JOIN
 	CART C 
 	ON M.USER_ID = C.USER_ID
-    LEFT JOIN
+    JOIN
     ITEM I
     ON C.ITEM_NUM = I.ITEM_NUM
-    LEFT JOIN
+    JOIN
     ITEMFILE  F
     ON I.ITEM_NUM = F.ITEM_NUM
 WHERE M.USER_ID= #{user_id}

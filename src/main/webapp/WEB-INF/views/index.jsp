@@ -54,17 +54,23 @@
 				<c:forEach items="${newlist}" var="list">
 				<a href="/item/detail?item_num=${list.item_num}"> 
 					<img src="/resources/upload/item/${list.itemFileDTOs[0].fileName}">
-					<p>${list.item_title}</p>
+<%-- 					<p>${list.item_title}</p>
 					<p class="price">
 					<fmt:formatNumber value="${list.item_price}" pattern="###,###"/>
 					원
-					</p>
+					</p> --%>
 				</a>
 				</c:forEach>
-
+				
 				<div class="clearfix"></div>
 			</div>
-			
+							<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 			<img alt="" src="//file.spigen.co.kr/_data/old_attach/store/main/main_banner/2022/0809_galaxy_z/mb_ipad_pc.jpg" style="margin-left: 50px;">
 			<img alt="" src="//file.spigen.co.kr/_data/old_attach/store/main/main_banner/2022/0907_apple/mb_apple_watch_pc.jpg">
 			<img alt="" src="//file.spigen.co.kr/_data/old_attach/store/main/main_banner/2022/0809_galaxy_z/mb_airpods_pc.jpg">
@@ -76,11 +82,11 @@
 				<c:forEach items="${poplist}" var="pop">
 				<a href="/item/detail?item_num=${pop.item_num}"> 
 					<img src="/resources/upload/item/${pop.itemFileDTOs[0].fileName}">
-					<p>${pop.item_title}</p>
+<%-- 					<p>${pop.item_title}</p>
 					<p class="price">
 					<fmt:formatNumber value="${pop.item_price}" pattern="###,###"/>
 					원
-					</p>
+					</p> --%>
 				</a>
 				</c:forEach>
 				<div class="clearfix"></div>
@@ -91,15 +97,25 @@
 				<c:forEach items="${recommendlist}" var="recommend">
 				<a href="/item/detail?item_num=${recommend.item_num}"> 
 					<img src="/resources/upload/item/${recommend.itemFileDTOs[0].fileName}">
-					<p>${recommend.item_title}</p>
+<%-- 					<p>${recommend.item_title}</p>
 					<p class="price">
 					<fmt:formatNumber value="${recommend.item_price}" pattern="###,###"/>
 					원
-					</p>
+					</p> --%>
 				</a>
 				</c:forEach>
 				<div class="clearfix"></div>
-			</div> -->
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			
 		</section>
 

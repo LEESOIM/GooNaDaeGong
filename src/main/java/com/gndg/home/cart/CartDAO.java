@@ -13,6 +13,11 @@ public class CartDAO {
 	private SqlSession sqlSession;
 	private final String NAMESPACE ="com.gndg.home.cart.CartDAO.";
 	
+	//카트 중복
+	public Long getDulCart(CartDTO cartDTO)throws Exception{
+	    return sqlSession.selectOne(NAMESPACE+"getDulCart", cartDTO);
+	}
+	
 	//카트추가
 	public int setAddCart(CartDTO cartDTO)throws Exception{
 		return sqlSession.insert(NAMESPACE+"setAddCart", cartDTO);

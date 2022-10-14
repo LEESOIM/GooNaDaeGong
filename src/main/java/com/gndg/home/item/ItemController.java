@@ -38,6 +38,17 @@ public class ItemController {
 	@Autowired
 	private CartService cartService;
 	
+	//카트중복
+	@RequestMapping(value="dulCart", method = RequestMethod.POST)
+	@ResponseBody
+	public Long getDulCart(CartDTO cartDTO,HttpSession session)throws Exception{
+	    MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+	    cartDTO.setUser_id(memberDTO.getUser_id());
+	    Long result = cartService.getDulCart(cartDTO);
+	    
+	    return result;
+	}
+	
     //카트 추가  
     @RequestMapping(value="AddCart", method = RequestMethod.POST)
     @ResponseBody

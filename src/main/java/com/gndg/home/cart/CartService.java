@@ -10,6 +10,10 @@ public class CartService {
 	@Autowired
 	private CartDAO cartDAO;
 	
+	//카트중복
+	public Long getDulCart(CartDTO cartDTO)throws Exception{
+	    return cartDAO.getDulCart(cartDTO);
+	}
 	
 	//카트추가
 	public int setAddCart(CartDTO cartDTO)throws Exception{

@@ -55,8 +55,8 @@
                                 </h4>
                                 <ul id="cartList">
                                     <c:choose>
-                                    <c:when test="${cart eq null}">
-                                       <p class="css-l1lu2l eqymnpn0">장바구니에 담긴 상품이 없습니다 안먹혀 시발..</p>
+                                    <c:when test="${empty cart}">
+                                       <p class="css-l1lu2l eqymnpn0">장바구니에 담긴 상품이 없습니다.</p>
                                     </c:when>
                                     <c:otherwise>
                                     <c:forEach items="${cart}" var="list">
@@ -124,7 +124,7 @@
                             <div class="css-t4mc5m ea1mry77">
                                 <span class="css-vmo0an ea1mry76">배송비</span>
                                 <c:choose>
-                                	<c:when test="${sum >= 30000 }">
+                                	<c:when test="${sum >= 30000 || sum==0}">
                                 <span class="css-iinokh ea1mry74">0<span class="css-hfgifi ea1mry72">원</span></span>
                                 	</c:when>
                                 	<c:otherwise>

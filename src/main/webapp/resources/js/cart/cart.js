@@ -125,7 +125,7 @@ for(let i=0; i<del.length; i++){
                     let result =  xhttp.responseText.trim();
                     if(result ==1){
                         alert(cartNum+"번 삭제 성공");
-                        
+                        window.location.reload();
                     }else{
                         alert(cartNum+"번 삭제 실패");
                     }
