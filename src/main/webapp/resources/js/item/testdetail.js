@@ -1,16 +1,16 @@
-const cartbtn = document.querySelectorAl(".cartbtn");
-let user_id = document.getElementById("user_id");
-const item_num = document.getElementById("item_num");
+const cartbtn = document.querySelector(".cartbtn");
+let id = document.querySelector("#user_id");
+let num = document.querySelector("#item_num");
 const count = document.getElementById("itemCount");
 
 cartbtn.addEventListener("click",function(){
     console.log("떼잉 장바구니년!");
-    let userID = user_id.value;
+    let userID = id.value;
     let cartCount = count.value;
-    let itemNum = item_num.value;
-    console.log("시발 아이디",userID);
+    let itemNum = num.value;
+    console.log("아이디",userID);
     console.log("cartCount==",cartCount);
-    console.log("시발 아이템 넘",itemNum);
+    console.log("아이템 넘",itemNum);
     const xhttp = new XMLHttpRequest();
     xhttp.open("POST","/item/AddCart");
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

@@ -303,6 +303,6 @@ a {
 		getReview(1);
 		share();
 	</script>
-	<!-- <script src="/resources/js/item/testdetail.js"></script> -->
+	<script src="/resources/js/item/testdetail.js"></script>
 </body>
 </html>

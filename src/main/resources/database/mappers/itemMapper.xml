@@ -94,6 +94,7 @@
 	     ON I.ITEM_NUM = F.ITEM_NUM
 	    ORDER BY ITEM_HIT DESC) M)
 	WHERE RN BETWEEN 1 AND 8
+	</select>
 
 
 	<!-- 통합 검색 -->

@@ -152,7 +152,6 @@ public class MypageController {
 	        System.out.println(i+"번 째== "+al.get(i).getRv_title());
 	        System.out.println(i+"번 째== "+al.get(i).getRv_contents());
 	        System.out.println(i+"번 째== "+al.get(i).getRv_date());
-	        System.out.println(i+"번 째== "+al.get(i).getRv_file());
 	    }
 	    
 	    mv.addObject("review", al);   
