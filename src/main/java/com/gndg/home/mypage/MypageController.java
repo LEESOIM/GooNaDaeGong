@@ -194,14 +194,6 @@ public class MypageController {
        memberDTO.setUser_id(memberDTO2.getUser_id());
       System.out.println("개인정보 수정 아이딘== "+memberDTO.getUser_id());
      memberDTO =  mypageService.getMyInfo(memberDTO);
-     System.out.println(memberDTO.getUser_id());
-     System.out.println(memberDTO.getUser_pw());
-     System.out.println(memberDTO.getUser_name());
-     System.out.println(memberDTO.getUser_email());
-     System.out.println(memberDTO.getUser_phone());
-     System.out.println(memberDTO.getUser_post());
-     System.out.println(memberDTO.getUser_addr());
-     System.out.println(memberDTO.getUser_addr2());
 //	     System.out.println(memberDTO.getMemberFileDTO().getFileName());
      MemberFileDTO memberFileDTO = new MemberFileDTO();
      memberFileDTO.setUser_id(memberDTO2.getUser_id());
@@ -216,10 +208,17 @@ public class MypageController {
 	
 	@RequestMapping(value="myUpdate", method = RequestMethod.POST)
 	public String myUpdate(MemberDTO memberDTO, MultipartFile userfile, HttpSession session)throws Exception{
-		memberDTO = (MemberDTO)session.getAttribute("member");
-		memberDTO.setUser_id(memberDTO.getUser_id());
+//		memberDTO = (MemberDTO)session.getAttribute("member");
+//		memberDTO.setUser_id(memberDTO.getUser_id());
 	    mypageService.setMyUpdate(memberDTO, userfile, session.getServletContext());
-		
+	    System.out.println(memberDTO.getUser_id());
+	     System.out.println(memberDTO.getUser_pw());
+	     System.out.println(memberDTO.getUser_name());
+	     System.out.println(memberDTO.getUser_email());
+	     System.out.println(memberDTO.getUser_phone());
+	     System.out.println(memberDTO.getUser_post());
+	     System.out.println(memberDTO.getUser_addr());
+	     System.out.println(memberDTO.getUser_addr2());
 		return "redirect:./mypage";
 	}
 	

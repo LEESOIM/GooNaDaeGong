@@ -61,7 +61,7 @@
 		            <div class="css-i3aepa e1c07x4811">
 		                <div class="css-1u8qly9 e1c07x489">
 		                    <div class="e1c07x4810 css-1qpsnts e3um3060">
-		                        <img src="../resources/upload/gnItem/${like.itemFileDTOs[0].fileName}" alt="응애" loading="lazy">
+		                        <img src="../resources/upload/item/${like.itemFileDTOs[0].fileName}" alt="응애" loading="lazy">
 		                    </div>
 		                </div>
                         <div class="css-c1cgl e1c07x486">

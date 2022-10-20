@@ -111,7 +111,7 @@ public class MemberController {
 		ModelAndView mv = new ModelAndView();
 		memberDTO = memberService.getLogin(memberDTO);
 		session.setAttribute("member", memberDTO);
-		System.out.println(memberDTO.getUser_grade());
+		
 		
 		int result = 0;
 		String message = "로그인 실패";

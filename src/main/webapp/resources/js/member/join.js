@@ -195,7 +195,7 @@ all.addEventListener("click",function(){
             img[t].setAttribute("src","/resources/images/member/check.svg");
         }
     }else{
-        console.log("뭐야 왜안되는거임 시발");
+        console.log("뭐야 왜안되는거임");
     }
     for(let i=0; i<agrees.length; i++){
         agrees[i].checked = all.checked
@@ -222,6 +222,7 @@ for(let a=0; a<agrees.length; a++){
                 break;
             }else{
                 img[0].setAttribute("src","/resources/images/member/checked.svg");
+                agreeCheck = true;
             }
         }
         all.checked = result;

@@ -83,7 +83,9 @@
                                                     <c:if test="${list.item_count eq 1 }">
                                                         <button type="button" aria-label="수량내리기" disabled class="css-1e90glc minusbutton" id="minusbtn"></button>
                                                     </c:if>
+                                                    <c:if test="${list.item_count > 1}">
                                                         <button type="button" aria-label="수량내리기" class="css-8azp8 minusbutton" data-cart-num="${list.cart_num}"></button>
+                                                    </c:if>
                                                 
                                                 <div class="css-6m57y0 e1cqr3m41 data-cartlist=0 count"  data-cart-num="${list.cart_num}">${list.item_count}</div>
                                                 
@@ -124,7 +126,7 @@
                             <div class="css-t4mc5m ea1mry77">
                                 <span class="css-vmo0an ea1mry76">배송비</span>
                                 <c:choose>
-                                	<c:when test="${sum >= 30000 || sum==0}">
+                                	<c:when test="${sum >= 30000 || sum == 0}">
                                 <span class="css-iinokh ea1mry74">0<span class="css-hfgifi ea1mry72">원</span></span>
                                 	</c:when>
                                 	<c:otherwise>
@@ -135,7 +137,7 @@
                             <div class="css-7ygxxm eepcpbj4">
                                 <span class="css-vmo0an eepcpbj3">결제예정금액</span>
                                 <c:choose>
-                                	<c:when test="${sum >= 30000 }">
+                                	<c:when test="${sum >= 30000 || sum == 0 }">
 		                                <span class="css-da7gr8 eepcpbj2">
 		                                    <strong class="css-xmbce4 eepcpbj0">
 		                                    <fmt:formatNumber value="${sum}" pattern="###,###"/>
